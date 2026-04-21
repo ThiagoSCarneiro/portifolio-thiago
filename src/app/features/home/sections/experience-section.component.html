@@ -1,0 +1,26 @@
+<section class="band" aria-labelledby="experiencia">
+  <div class="band__inner">
+    <app-section-heading
+      title="Experiência"
+      eyebrow="Trajetória"
+      anchorId="experiencia"
+      subtitle="Experiências que moldam responsabilidade, organização e contato com operação real."
+    />
+
+    <ol class="timeline">
+      @for (job of items(); track job.title + job.company) {
+        <li class="card">
+          <div class="card__top">
+            <h3 class="card__title">{{ job.title }}</h3>
+            <p class="card__meta">{{ job.company }} · {{ job.period }}</p>
+          </div>
+          <ul class="card__list">
+            @for (b of job.bullets; track b) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

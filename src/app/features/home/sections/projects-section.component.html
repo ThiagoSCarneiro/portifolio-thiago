@@ -1,0 +1,26 @@
+<section class="band" aria-labelledby="projetos">
+  <div class="band__inner">
+    <app-section-heading
+      title="Projetos em destaque"
+      eyebrow="Portfólio"
+      anchorId="projetos"
+      subtitle="Entregas com foco em consistência de dados, múltiplas interfaces e versionamento."
+    />
+
+    <ul class="grid">
+      @for (p of items(); track p.name) {
+        <li class="proj">
+          <div class="proj__head">
+            <h3 class="proj__title">{{ p.name }}</h3>
+            <span class="proj__tag">{{ p.context }}</span>
+          </div>
+          <ul class="proj__list">
+            @for (h of p.highlights; track h) {
+              <li>{{ h }}</li>
+            }
+          </ul>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

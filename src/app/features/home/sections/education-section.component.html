@@ -1,0 +1,20 @@
+<section class="band" aria-labelledby="formacao">
+  <div class="band__inner">
+    <app-section-heading
+      title="Formação acadêmica"
+      eyebrow="Formação"
+      anchorId="formacao"
+      subtitle="Base acadêmica alinhada à construção de software com qualidade e boas práticas."
+    />
+
+    <ul class="grid">
+      @for (edu of items(); track edu.title + edu.institution) {
+        <li class="tile">
+          <h3 class="tile__title">{{ edu.title }}</h3>
+          <p class="tile__sub">{{ edu.institution }}</p>
+          <p class="tile__detail">{{ edu.detail }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

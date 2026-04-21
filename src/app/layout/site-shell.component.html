@@ -1,0 +1,5 @@
+<div class="shell">
+  <app-site-header [brand]="snapshot.profile.fullName" [navItems]="navItems" />
+  <router-outlet />
+  <app-site-footer [year]="year" [author]="snapshot.profile.fullName" [links]="snapshot.profile.links" />
+</div>

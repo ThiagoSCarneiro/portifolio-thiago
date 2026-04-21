@@ -1,0 +1,22 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__inner">
+    <p class="hero__kicker">Portfólio profissional</p>
+    <h1 class="hero__title" id="hero-title">{{ profile().fullName }}</h1>
+    <p class="hero__headline">{{ profile().headline }}</p>
+    <p class="hero__meta">{{ profile().location }}</p>
+
+    <div class="hero__actions" role="group" aria-label="Principais contatos">
+      @for (link of profile().links; track link.url) {
+        @if (link.kind === 'github' || link.kind === 'linkedin' || link.kind === 'email') {
+          <a
+            class="hero__btn"
+            [href]="link.url"
+            [attr.target]="link.url.startsWith('http') ? '_blank' : null"
+            [attr.rel]="link.url.startsWith('http') ? 'noopener noreferrer' : null"
+            >{{ link.label }}</a
+          >
+        }
+      }
+    </div>
+  </div>
+</section>

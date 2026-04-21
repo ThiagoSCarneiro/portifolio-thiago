@@ -1,0 +1,44 @@
+.band {
+  padding: clamp(2.25rem, 5vw, 3.25rem) clamp(1rem, 4vw, 1.5rem);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.band__inner {
+  max-width: var(--layout-max);
+  margin: 0 auto;
+}
+
+.grid {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.tile {
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 1.1rem 1.15rem;
+  background: var(--color-surface);
+}
+
+.tile__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.02rem;
+  font-weight: 650;
+  color: var(--color-text);
+}
+
+.tile__sub {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.tile__detail {
+  margin: 0;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--color-muted) 92%, var(--color-text));
+}

@@ -1,0 +1,74 @@
+.hero {
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1rem, 4vw, 1.5rem);
+  border-bottom: 1px solid var(--color-border);
+  background:
+    radial-gradient(1200px 500px at 20% -10%, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 55%),
+    radial-gradient(900px 400px at 90% 0%, color-mix(in srgb, var(--color-accent-2) 16%, transparent), transparent 50%),
+    var(--color-bg);
+}
+
+.hero__inner {
+  max-width: var(--layout-max);
+  margin: 0 auto;
+}
+
+.hero__kicker {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.hero__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--color-text);
+}
+
+.hero__headline {
+  margin: 0 0 0.75rem;
+  max-width: 52ch;
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  line-height: 1.55;
+  color: var(--color-muted);
+}
+
+.hero__meta {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--color-muted) 92%, var(--color-text));
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+  border-radius: 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 55%, transparent);
+  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  &:hover {
+    background: color-mix(in srgb, var(--color-accent) 28%, transparent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}

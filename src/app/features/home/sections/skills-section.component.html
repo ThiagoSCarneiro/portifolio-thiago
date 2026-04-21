@@ -1,0 +1,23 @@
+<section class="band" aria-labelledby="habilidades">
+  <div class="band__inner">
+    <app-section-heading
+      title="Competências técnicas"
+      eyebrow="Stack"
+      anchorId="habilidades"
+      subtitle="Ferramentas e tecnologias que uso no dia a dia de desenvolvimento."
+    />
+
+    <div class="skills">
+      @for (g of groups(); track g.category; let i = $index) {
+        <section class="group" [attr.aria-labelledby]="'skill-cat-' + i">
+          <h3 class="group__title" [id]="'skill-cat-' + i">{{ g.category }}</h3>
+          <ul class="chips">
+            @for (item of g.items; track item) {
+              <li class="chip">{{ item }}</li>
+            }
+          </ul>
+        </section>
+      }
+    </div>
+  </div>
+</section>

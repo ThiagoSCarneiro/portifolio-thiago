@@ -1,0 +1,39 @@
+<section class="band band--tail" aria-labelledby="contato">
+  <div class="band__inner">
+    <app-section-heading
+      title="Contato profissional"
+      eyebrow="Canais institucionais"
+      anchorId="contato"
+      subtitle="Coloco-me à disposição para oportunidades de emprego na área de desenvolvimento de sistemas. Para propostas formais ou recrutamento, utilize preferencialmente o e-mail ou o telefone abaixo, informando brevemente a posição, requisitos e etapas do processo seletivo."
+    />
+
+    <div class="panel">
+      <div class="panel__block">
+        <p class="label">E-mail</p>
+        <a class="value" [href]="'mailto:' + email()">{{ email() }}</a>
+      </div>
+      <div class="panel__block">
+        <p class="label">Telefone</p>
+        <a class="value" [href]="phoneDialUrl()">{{ phone() }}</a>
+      </div>
+      <div class="panel__block">
+        <p class="label">Localização</p>
+        <p class="value value--text">{{ location() }}</p>
+      </div>
+    </div>
+
+    <ul class="links" aria-label="Redes e portfólio">
+      @for (link of links(); track link.url) {
+        <li>
+          <a
+            class="links__a"
+            [href]="link.url"
+            [attr.target]="link.url.startsWith('http') ? '_blank' : null"
+            [attr.rel]="link.url.startsWith('http') ? 'noopener noreferrer' : null"
+            >{{ link.label }}</a
+          >
+        </li>
+      }
+    </ul>
+  </div>
+</section>

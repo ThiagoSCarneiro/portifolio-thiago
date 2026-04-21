@@ -1,0 +1,18 @@
+<footer class="foot" role="contentinfo">
+  <div class="foot__inner">
+    <p class="foot__copy">© {{ year() }} {{ author() }}. Salvador, BA.</p>
+    <ul class="foot__links" aria-label="Links rápidos">
+      @for (link of links(); track link.url) {
+        <li>
+          <a
+            class="foot__a"
+            [href]="link.url"
+            [attr.target]="isHttpLink(link) ? '_blank' : null"
+            [attr.rel]="isHttpLink(link) ? 'noopener noreferrer' : null"
+            >{{ link.label }}</a
+          >
+        </li>
+      }
+    </ul>
+  </div>
+</footer>

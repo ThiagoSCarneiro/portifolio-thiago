@@ -1,0 +1,43 @@
+.band {
+  padding: clamp(2.25rem, 5vw, 3.25rem) clamp(1rem, 4vw, 1.5rem);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.band__inner {
+  max-width: var(--layout-max);
+  margin: 0 auto;
+}
+
+.skills {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.group__title {
+  margin: 0 0 0.55rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}

@@ -1,0 +1,15 @@
+<main id="conteudo-principal" class="page" tabindex="-1">
+  <app-hero-section [profile]="snapshot.profile" />
+  <app-about-section [summary]="snapshot.profile.summary" />
+  <app-experience-section [items]="snapshot.experience" />
+  <app-education-section [items]="snapshot.education" />
+  <app-projects-section [items]="snapshot.projects" />
+  <app-skills-section [groups]="snapshot.skills" />
+  <app-contact-section
+    [email]="snapshot.profile.email"
+    [phone]="snapshot.profile.phone"
+    [phoneDialUrl]="snapshot.profile.phoneDialUrl"
+    [location]="snapshot.profile.location"
+    [links]="snapshot.profile.links"
+  />
+</main>
