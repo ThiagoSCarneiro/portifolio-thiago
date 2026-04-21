@@ -57,11 +57,11 @@ export const PORTFOLIO_SNAPSHOT: PortfolioSnapshot = {
       ],
     },
     {
-      name: 'Venda Certa',
+      name: 'api-pdv',
       context: 'Projeto pessoal',
       highlights: [
-        'Ecossistema Web e Mobile com banco centralizado em MySQL.',
-        'Autenticação, CRUD e consistência de dados entre canais.',
+        'Api RESTful com Spring Boot.',
+        'Autenticação e CRUD completo com banco de dados MySQL.',
         'Versionamento e documentação com Git/GitHub.',
       ],
     },
